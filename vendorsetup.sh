@@ -37,11 +37,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
     export OF_DISABLE_MIUI_SPECIFIC_FEATURES=1
-	export FOX_USE_BASH_SHELL=1
-	export FOX_ASH_IS_BASH=1
-	export FOX_USE_TAR_BINARY=1
-	export FOX_USE_SED_BINARY=1
-	export FOX_USE_XZ_UTILS=1
+    export FOX_REMOVE_AAPT=1
+    export FOX_REMOVE_BUSYBOX_BINARY=1
+    export FOX_REMOVE_ZIP_BINARY=1
+    export FOX_USE_GREP_BINARY=0
+    export FOX_USE_XZ_UTILS=0
+    export FOX_USE_SED_BINARY=0
+    export FOX_USE_TAR_BINARY=0
+    export FOX_EXCLUDE_NANO_EDITOR=1
+    export FOX_REMOVE_BASH=1
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
